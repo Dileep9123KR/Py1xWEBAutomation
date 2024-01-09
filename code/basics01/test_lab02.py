@@ -2,6 +2,8 @@
 import time
 
 from selenium import webdriver
+import logging
+import pytest
 
 
 def test_open_login_page():
@@ -12,10 +14,12 @@ def test_open_login_page():
     chrome_options.add_extension(extension_path)
 
     chrome_options.add_argument("--start-maximized")
-
+    LOGGER = logging.getLogger(__name__)
     driver = webdriver.Chrome(options=chrome_options)
     driver.get("https://google.com")
 
-    #driver.maximize_window()
+    # driver.maximize_window()
     print(driver.title)
+
+    LOGGER.info("This is Information logs")
     time.sleep(200)
