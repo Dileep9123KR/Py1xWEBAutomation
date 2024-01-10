@@ -24,9 +24,9 @@ def test_open_login_page_positive():
     submit_btn.click()
 
     print(driver.current_url)
-    # assert driver.current_url == "https://app.vwo.com/#/dashboard", 'Error wrong URL'
-    # verify_login = driver.find_element(By.XPATH, "//span[@class='Fw(semi-bold) ng-binding']").text
-    # assert "Aman" == verify_login, 'Login error'
+    assert driver.current_url == "https://app.vwo.com/#/login", 'Error wrong URL'
+    # verify_login = driver.find_element(By.XPATH, "//h1[@class='page-heading']")
+    # assert "Aman" == verify_login.text
 
     print(driver.title)
 

@@ -23,8 +23,8 @@ def test_open_login_page_negative():
     submit_btn = driver.find_element(By.ID, "js-login-btn")
     submit_btn.click()
 
-    error_msg = driver.find_element(By.CLASS_NAME,"notification-box-description").text
-    assert "Your email, password, IP address or location did not match" == error_msg
+    error_msg = driver.find_element(By.XPATH,"//div[@data-qa='miqunuyohi']")
+    assert "Your email, password, IP address or location did not match" == error_msg.text
 
     print(driver.title)
 
