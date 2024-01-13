@@ -13,3 +13,10 @@
 ``pip install selenium pytest pytest-html allure-pytest``
 
 
+## How to run your test cases parallely
+``Install the module pytest-xdist``
+``pip install pytest-xdist``
+``pytest -n auto followed by file path``
+
+
+

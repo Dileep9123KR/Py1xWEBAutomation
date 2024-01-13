@@ -15,6 +15,6 @@ def test_open_login_page():
     print(driver.title)
 
     LOGGER.info("This is Information logs")
-    time.sleep(20)
+    time.sleep(10)
 
     driver.quit() # Quit the browser and close all the windows and sessionid will be null

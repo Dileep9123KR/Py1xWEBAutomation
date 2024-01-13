@@ -22,8 +22,8 @@ def test_open_login_page():
     # mk_apntmnt_btn_text_partial = driver.find_element(By.XPATH, "//a[contains(text(), 'Make App')]")
     # mk_apntmnt_btn_text_partial.click()
 
-    pt = driver.find_element(By.CLASS_NAME, "text-muted")
-    print(pt.text)
+    # //a[text()="Make Appointment" and contains(@id,"btn-make-appointment")] ->
+    # we can use this too for clicking make appointment button
 
     assert driver.current_url == "https://katalon-demo-cura.herokuapp.com/profile.php#login"
 
@@ -35,3 +35,7 @@ def test_open_login_page():
     # Text() - //a[text()='Make Appointment'] -> Full visible Text Match
     # partial => Contains() - //a[contains(text(), 'Make App')] or //a[contains(text(), 'Make')]
     # Starts-with() - //a[starts-with(text(), 'Make')] -> the word starts with "Make"  will include
+
+    # XPATH OR and AND
+    # //p[contains(text(),'A') and contains(@class, 'mute')]
+    # //p[contains(text(),'A') or contains(@class, 'mute')] -> this will return a list of items
